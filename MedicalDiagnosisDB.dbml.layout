@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.25" name="MedicalDiagnosisDB">
+  <DataContextMoniker Name="/MedicalDiagnosisDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1365ce14-e2e5-45d0-8da8-dade100f1b3a" absoluteBounds="0.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/MedicalDiagnosisDBDataContext/AdminPanel2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f03f01c-3dd9-4bcd-b250-4208b28e82d5" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00f9e581-7aec-4e31-9b1a-4f4fb407a650" absoluteBounds="3.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/MedicalDiagnosisDBDataContext/DiagnosisDisease" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5b25d01-a82c-49ac-9071-e005dec4b761" absoluteBounds="3.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fbd00570-716d-4377-8c5e-be250669c79f" absoluteBounds="3.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/MedicalDiagnosisDBDataContext/MedicineDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a299c417-6ed2-4984-be05-33477d61c79e" absoluteBounds="3.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a8ae2a77-9bd1-4b3a-876f-6352f602e4de" absoluteBounds="6.75, 0.75, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/MedicalDiagnosisDBDataContext/PatientDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d705633-3e76-4554-a3fc-ac06bb22b71e" absoluteBounds="6.765, 1.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eea7b266-1078-4440-b40b-66efad0a812c" absoluteBounds="0.75, 6.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/MedicalDiagnosisDBDataContext/Probability_of_disease" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1c4dd04-facc-4d3b-8725-d48e99f73278" absoluteBounds="0.765, 7.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ccb20782-17df-409b-b1f2-9dbdfc1fe89b" absoluteBounds="3.75, 6.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MedicalDiagnosisDBDataContext/Symptom_selected" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c642c7df-1179-43eb-a912-403f396fbc8e" absoluteBounds="3.765, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="13a14443-d6df-42a5-bec7-771d3e3c6bab" absoluteBounds="6.75, 4.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MedicalDiagnosisDBDataContext/kalajarDisease" />
+      <nestedChildShapes>
+        <elementListCompartment Id="160de011-fb61-4fa1-b52b-87c9e7780ddf" absoluteBounds="6.765, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d2cf7b68-36c9-4c4c-8577-0571321c6ac7" absoluteBounds="6.75, 6.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MedicalDiagnosisDBDataContext/MalariaDisease" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f23ab25-440d-4280-8cf8-c61a95fc7eed" absoluteBounds="6.765, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9e892a8-1653-46b1-bb3b-7c2212a96a89" absoluteBounds="3.75, 8.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MedicalDiagnosisDBDataContext/typhoid_Disease" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b1c1d4d-ee18-4f19-b556-7cda6f361ee1" absoluteBounds="3.765, 9.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="97861c0e-b80f-41d7-a8cf-f21660744ab0" absoluteBounds="6.75, 8.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MedicalDiagnosisDBDataContext/tubuerculosisDisease" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb3518ef-f389-4290-84c4-87234c30ccc4" absoluteBounds="6.765, 9.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

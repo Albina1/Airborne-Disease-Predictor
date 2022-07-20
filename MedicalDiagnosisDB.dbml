@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MedicalDiagonsisDB" Class="MedicalDiagnosisDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=THHE;Initial Catalog=MedicalDiagonsisDB;Integrated Security=True" SettingsObjectName="FInal_project.Properties.Settings" SettingsPropertyName="MedicalDiagonsisDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AdminPanel2" Member="AdminPanel2s">
+    <Type Name="AdminPanel2">
+      <Column Name="AdminID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="contact" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="first_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="middle_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Last_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email_ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DiagnosisDisease" Member="DiagnosisDiseases">
+    <Type Name="DiagnosisDisease">
+      <Column Name="patientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="symptom" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="sn" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MedicineDetail" Member="MedicineDetails">
+    <Type Name="MedicineDetail">
+      <Column Name="MedicineID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DiseaseName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MedicineName" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PatientDetail" Member="PatientDetails">
+    <Type Name="PatientDetail">
+      <Column Name="patientID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="patient_fname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="patient_middlename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="patient_lname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gender" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="age" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="contactnum" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="bloodgroup" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="zone" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="diseasefound" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Probability_of_disease" Member="Probability_of_diseases">
+    <Type Name="Probability_of_disease">
+      <Column Name="patient_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="malaria_probability" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="kalajar_probability" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="tuberculosis_probability" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="typhoid_probability" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Symptom_selected" Member="Symptom_selecteds">
+    <Type Name="Symptom_selected">
+      <Column Name="patient_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="symptom_list" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.kalajarDisease" Member="kalajarDiseases">
+    <Type Name="kalajarDisease">
+      <Column Name="[kalajar list]" Member="kalajar_list" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[kalajar symptom]" Member="kalajar_symptom" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MalariaDisease" Member="MalariaDiseases">
+    <Type Name="MalariaDisease">
+      <Column Name="[malaria list]" Member="malaria_list" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[malaria symptoms]" Member="malaria_symptoms" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[typhoid Disease]" Member="typhoid_Diseases">
+    <Type Name="typhoid_Disease">
+      <Column Name="[typhoid list]" Member="typhoid_list" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[typhoid symptom]" Member="typhoid_symptom" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tubuerculosisDisease" Member="tubuerculosisDiseases">
+    <Type Name="tubuerculosisDisease">
+      <Column Name="[tuberculosis list]" Member="tuberculosis_list" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[tuberculosis symptoms]" Member="tuberculosis_symptoms" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

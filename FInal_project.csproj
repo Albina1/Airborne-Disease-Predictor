@@ -1,0 +1,758 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FC63469-8873-4674-BB25-CCE8203488AC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FInal_project</RootNamespace>
+    <AssemblyName>Khwopa Medical Diagnosis</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>7afdae5c</NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>FInal_project.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord">
+      <HintPath>..\packages\Accord.3.7.0\lib\net45\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Controls">
+      <HintPath>..\packages\Accord.Controls.3.7.0\lib\net45\Accord.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Extensions.Core">
+      <HintPath>..\packages\Accord.Extensions.Core.3.0.1\lib\net45\Accord.Extensions.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.MachineLearning">
+      <HintPath>..\packages\Accord.MachineLearning.3.7.0\lib\net45\Accord.MachineLearning.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.MachineLearning.GPL">
+      <HintPath>..\packages\Accord.MachineLearning.GPL.3.7.0\lib\net45\Accord.MachineLearning.GPL.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math">
+      <HintPath>..\packages\Accord.Math.3.7.0\lib\net45\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math.Core">
+      <HintPath>..\packages\Accord.Math.3.7.0\lib\net45\Accord.Math.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics">
+      <HintPath>..\packages\Accord.Statistics.3.7.0\lib\net45\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge">
+      <HintPath>D:\AFORGE\AForge.NET Framework-2.2.5\Release\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>D:\AFORGE\AForge.NET Framework-2.2.5\Release\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>D:\AFORGE\AForge.NET Framework-2.2.5\Release\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader">
+      <HintPath>..\packages\ExcelDataReader.3.1.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aboutus1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aboutus1.Designer.cs">
+      <DependentUpon>Aboutus1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addAdmin.Designer.cs">
+      <DependentUpon>addAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="feedback.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="feedback.Designer.cs">
+      <DependentUpon>feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FInalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInalReport.Designer.cs">
+      <DependentUpon>FInalReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gridsymptom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gridsymptom.Designer.cs">
+      <DependentUpon>gridsymptom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertPatientID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertPatientID.Designer.cs">
+      <DependentUpon>InsertPatientID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="machineLearning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="machineLearning.Designer.cs">
+      <DependentUpon>machineLearning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagonsisDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagonsisDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagonsisDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagonsisDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagonsisDBDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagonsisDBDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagonsisDBDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagonsisDBDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagonsisDBDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagonsisDBDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagonsisDBDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagonsisDBDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagonsisDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagonsisDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagonsisDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagonsisDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagonsisDBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagonsisDBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagonsisDBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagonsisDBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagonsisDBDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagonsisDBDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagonsisDBDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagonsisDBDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagonsisDBDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagonsisDBDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagonsisDBDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagonsisDBDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="patientDataEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="patientDataEntry.Designer.cs">
+      <DependentUpon>patientDataEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Symptom_selection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Symptom_selection.Designer.cs">
+      <DependentUpon>Symptom_selection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucfrmlogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucfrmlogin.Designer.cs">
+      <DependentUpon>ucfrmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmmain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmain.Designer.cs">
+      <DependentUpon>frmmain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gridadminview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gridadminview.Designer.cs">
+      <DependentUpon>gridadminview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gridviewpatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gridviewpatient.Designer.cs">
+      <DependentUpon>gridviewpatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="healthtips.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="healthtips.Designer.cs">
+      <DependentUpon>healthtips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDiagnosisDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDiagnosisDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="MetroUserControl.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="settingadmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="settingadmin.Designer.cs">
+      <DependentUpon>settingadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="setupdiagnosis1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="setupdiagnosis1.Designer.cs">
+      <DependentUpon>setupdiagnosis1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="softwareTutorial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="softwareTutorial.Designer.cs">
+      <DependentUpon>softwareTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucdashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucdashboard.Designer.cs">
+      <DependentUpon>ucdashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDiseaseinfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDiseaseinfo.Designer.cs">
+      <DependentUpon>ucDiseaseinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_admin.Designer.cs">
+      <DependentUpon>Update_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_patient.Designer.cs">
+      <DependentUpon>Update_patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAdmintab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAdmintab.Designer.cs">
+      <DependentUpon>ViewAdmintab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="collection_viewpatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="collection_viewpatient.Designer.cs">
+      <DependentUpon>collection_viewpatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewreportfromPatientID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewreportfromPatientID.Designer.cs">
+      <DependentUpon>ViewreportfromPatientID.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Aboutus1.resx">
+      <DependentUpon>Aboutus1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addAdmin.resx">
+      <DependentUpon>addAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="feedback.resx">
+      <DependentUpon>feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInalReport.resx">
+      <DependentUpon>FInalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gridsymptom.resx">
+      <DependentUpon>gridsymptom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertPatientID.resx">
+      <DependentUpon>InsertPatientID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="machineLearning.resx">
+      <DependentUpon>machineLearning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="patientDataEntry.resx">
+      <DependentUpon>patientDataEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symptom_selection.resx">
+      <DependentUpon>Symptom_selection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucfrmlogin.resx">
+      <DependentUpon>ucfrmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmain.resx">
+      <DependentUpon>frmmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gridadminview.resx">
+      <DependentUpon>gridadminview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gridviewpatient.resx">
+      <DependentUpon>gridviewpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="healthtips.resx">
+      <DependentUpon>healthtips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settingadmin.resx">
+      <DependentUpon>settingadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="setupdiagnosis1.resx">
+      <DependentUpon>setupdiagnosis1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="softwareTutorial.resx">
+      <DependentUpon>softwareTutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucdashboard.resx">
+      <DependentUpon>ucdashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDiseaseinfo.resx">
+      <DependentUpon>ucDiseaseinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_admin.resx">
+      <DependentUpon>Update_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_patient.resx">
+      <DependentUpon>Update_patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAdmintab.resx">
+      <DependentUpon>ViewAdmintab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="collection_viewpatient.resx">
+      <DependentUpon>collection_viewpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewreportfromPatientID.resx">
+      <DependentUpon>ViewreportfromPatientID.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MedicalDiagnosisDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MedicalDiagnosisDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagnosisDB.dbml.layout">
+      <DependentUpon>MedicalDiagnosisDB.dbml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet.xsc">
+      <DependentUpon>MedicalDiagonsisDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDiagonsisDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet.xss">
+      <DependentUpon>MedicalDiagonsisDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet1.xsc">
+      <DependentUpon>MedicalDiagonsisDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDiagonsisDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet1.xss">
+      <DependentUpon>MedicalDiagonsisDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet10.xsc">
+      <DependentUpon>MedicalDiagonsisDBDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDiagonsisDBDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet10.xss">
+      <DependentUpon>MedicalDiagonsisDBDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet11.xsc">
+      <DependentUpon>MedicalDiagonsisDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDiagonsisDBDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet11.xss">
+      <DependentUpon>MedicalDiagonsisDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet12.xsc">
+      <DependentUpon>MedicalDiagonsisDBDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDiagonsisDBDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet12.xss">
+      <DependentUpon>MedicalDiagonsisDBDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet13.xsc">
+      <DependentUpon>MedicalDiagonsisDBDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDiagonsisDBDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet13.xss">
+      <DependentUpon>MedicalDiagonsisDBDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet2.xsc">
+      <DependentUpon>MedicalDiagonsisDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDiagonsisDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet2.xss">
+      <DependentUpon>MedicalDiagonsisDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet3.xsc">
+      <DependentUpon>MedicalDiagonsisDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDiagonsisDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet3.xss">
+      <DependentUpon>MedicalDiagonsisDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet4.xsc">
+      <DependentUpon>MedicalDiagonsisDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDiagonsisDBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet4.xss">
+      <DependentUpon>MedicalDiagonsisDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet5.xsc">
+      <DependentUpon>MedicalDiagonsisDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDiagonsisDBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet5.xss">
+      <DependentUpon>MedicalDiagonsisDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet6.xsc">
+      <DependentUpon>MedicalDiagonsisDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDiagonsisDBDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet6.xss">
+      <DependentUpon>MedicalDiagonsisDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet7.xsc">
+      <DependentUpon>MedicalDiagonsisDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDiagonsisDBDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet7.xss">
+      <DependentUpon>MedicalDiagonsisDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet8.xsc">
+      <DependentUpon>MedicalDiagonsisDBDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDiagonsisDBDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet8.xss">
+      <DependentUpon>MedicalDiagonsisDBDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet9.xsc">
+      <DependentUpon>MedicalDiagonsisDBDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDiagonsisDBDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDiagonsisDBDataSet9.xss">
+      <DependentUpon>MedicalDiagonsisDBDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khwopa logo.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-md-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ambulance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ambulance %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-stethoscope-variant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-stethoscope-variant %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simple-backgrounds-27.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simple-background-simple-hd-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o5kkKdN.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\big_thumb_54dc75d996d9d37639d7f69898e6b101.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\me3129835-simple-background-square-l-color-4k-hd-a0180.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simple-backgrounds-17278-17834-hd-wallpapers %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emergency-exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emergency-exit %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calligraphy-pen-tip-pointing-to-connector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feedback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feedback %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin-with-cogwheels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video-tutorial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-records.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-records %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newspaper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about-us.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Feedback-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noun_419920_cc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminlogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Photo-Editor-by-Aviary.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Photo-Video-Camera.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License-LGPL.txt" />
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Accord.3.7.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.7.0\build\Accord.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Accord.3.7.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.7.0\build\Accord.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
